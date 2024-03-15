@@ -1,7 +1,5 @@
 import random
-
-# dictionary contains supermarket name as key
-# and supermarket total as value, values are initially zero
+# dictionary contains supermarket name as key and supermarket total as value
 kori_supermarket = {
     "kori_A": 0,
     "kori_B": 0,
@@ -9,7 +7,6 @@ kori_supermarket = {
     "kori_D": 0,
     "kori_E": 0,
 }
-
 # We make a list out of the keys of our supermarket dictionary
 # In the next line we shuffle the list
 branch = list(kori_supermarket.keys())
@@ -20,8 +17,8 @@ for key in branch:
     price = []
     print(f"branch of {key}")
     print('enter "end" when you finish')
-    # We endlessly process the items per supermarket
 
+    # We endlessly process the items per supermarket
     while True:
         code = input("enter code: ").lower()
         # We key in end to end the processing of items
@@ -40,22 +37,11 @@ for key in branch:
         print(f"item total is {item_total}")
         print(" ")
 
-    # total_price = 0
-    # for prices in price:
-    #     total_price = prices + total_price
-    # print(f"total price for this supermarket is {total_price}")
-    # kori_supermarket[key] = total_price
-
     # Get the sum of the price array
     total_price = sum(price)
     kori_supermarket[key] = total_price
     print("Total amount for " + key + " is " + str(total_price))
     print(" ")
-
-# grand_total = 0
-# for branch in kori_supermarket:
-#     grand_total = grand_total + kori_supermarket[branch]
-#     print(f"total of branch of {branch} is {kori_supermarket[branch]}")
 
 # Get the sum of the values of the kori supermarket dictionary (grand total)
 grand_total = sum(kori_supermarket.values())
