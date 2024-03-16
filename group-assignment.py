@@ -8,9 +8,7 @@ kori_supermarket = {
     "kori_E": 0,
 }
 # We make a list out of the keys of our supermarket dictionary
-# In the next line we shuffle the list
 branch = list(kori_supermarket.keys())
-random.shuffle(branch)
 
 # We loop through the list we created
 for key in branch:
@@ -32,7 +30,7 @@ for key in branch:
         unit_price = float(input("enter unit price: "))
         quantity = int(input("enter quantity: "))
         item_total = quantity * unit_price
-        # We append total per item to empty price list in line 20
+        # We append total per item to empty price list
         price.append(item_total)
         print(f"item total is {item_total}")
         print(" ")
@@ -43,6 +41,8 @@ for key in branch:
     print("Total amount for " + key + " is " + str(total_price))
     print(" ")
 
+print("Here is each branch with its total : ")
+print(kori_supermarket)
 # Get the sum of the values of the kori supermarket dictionary (grand total)
 grand_total = sum(kori_supermarket.values())
 print(f"The grand total is {grand_total}")
