@@ -179,12 +179,13 @@ def print_report_card():
             print("Key in a valid ID")
             continue
         else:
+            # If id exists print the details of that student ID.
             print("Student's id: " + get_id)
             for item in get_info[get_id].items():
                 print(str(item[0]) + " : " + str(item[1]))
+        # print the date and time of viewing as question requires
         now = datetime.now().strftime('%a %d %b %Y, %I:%M%p')
         print("Date and time viewed: " + now)
-
         print(" ")
 
 
